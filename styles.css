@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '楷体', '微软雅黑', Arial, sans-serif;
+    line-height: 1.6;
+    color: #8B2323;
+    background-color: #FFF3E0;
+    background-image: 
+        linear-gradient(rgba(255, 243, 224, 0.92), rgba(255, 243, 224, 0.92)),
+        url('1/1.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    background: url('1/1.png');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFF3E0;
+    padding: 4rem 2.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 800px;
+    backdrop-filter: blur(3px);
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);  /* 增强文字阴影使文字更清晰 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 1.2rem 0;
+    background-color: rgba(0, 0, 0, 0.3);  /* 稍微加深导航栏背景 */
+    border-radius: 5px;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 1.2rem 2rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: #f7e9d7;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);  /* 增强导航文字阴影 */
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 2rem 0;
+    padding: 2.5rem;
+    background: linear-gradient(to bottom right, rgba(255, 243, 224, 0.95), rgba(255, 255, 255, 0.95));
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.intro-text::before,
+.feature-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #8B2323;
+    border-radius: 10px;
+    pointer-events: none;
+    background: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%238B2323" d="M20,40 Q30,20 50,30 Q70,40 80,20 Q60,40 70,60 Q80,80 60,70 Q40,60 20,40 Z"/></svg>') top left,
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%238B2323" d="M20,40 Q30,20 50,30 Q70,40 80,20 Q60,40 70,60 Q80,80 60,70 Q40,60 20,40 Z"/></svg>') top right,
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%238B2323" d="M20,40 Q30,20 50,30 Q70,40 80,20 Q60,40 70,60 Q80,80 60,70 Q40,60 20,40 Z"/></svg>') bottom left,
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%238B2323" d="M20,40 Q30,20 50,30 Q70,40 80,20 Q60,40 70,60 Q80,80 60,70 Q40,60 20,40 Z"/></svg>') bottom right;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px, calc(100% - 10px) 10px, 10px calc(100% - 10px), calc(100% - 10px) calc(100% - 10px);
+}
+
+.intro-text p {
+    margin: 0;
+    text-align: left;
+    flex: 1;
+    line-height: 1.8;
+}
+
+.feature-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.feature-box::after,
+.intro-text::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid rgba(139, 35, 35, 0.3);
+    border-radius: 5px;
+    pointer-events: none;
+    background: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><path fill="%238B2323" fill-opacity="0.1" d="M10,25 Q20,10 30,25 Q40,40 50,25 Q60,10 70,25 Q80,40 90,25"/></svg>') center top,
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><path fill="%238B2323" fill-opacity="0.1" d="M10,25 Q20,10 30,25 Q40,40 50,25 Q60,10 70,25 Q80,40 90,25"/></svg>') center bottom;
+    background-size: 100px 30px;
+    background-repeat: no-repeat;
+}
+
+.feature-box h3,
+.intro-text h2 {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-box h3::after,
+.intro-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #8B2323, transparent);
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box:hover::before {
+    border-color: #D4574E;
+    background: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4574E" d="M20,40 Q30,20 50,30 Q70,40 80,20 Q60,40 70,60 Q80,80 60,70 Q40,60 20,40 Z"/></svg>') top left,
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4574E" d="M20,40 Q30,20 50,30 Q70,40 80,20 Q60,40 70,60 Q80,80 60,70 Q40,60 20,40 Z"/></svg>') top right,
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4574E" d="M20,40 Q30,20 50,30 Q70,40 80,20 Q60,40 70,60 Q80,80 60,70 Q40,60 20,40 Z"/></svg>') bottom left,
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4574E" d="M20,40 Q30,20 50,30 Q70,40 80,20 Q60,40 70,60 Q80,80 60,70 Q40,60 20,40 Z"/></svg>') bottom right;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px, calc(100% - 10px) 10px, 10px calc(100% - 10px), calc(100% - 10px) calc(100% - 10px);
+}
+
+footer {
+    background: linear-gradient(135deg, 
+        rgba(139, 35, 35, 0.95), 
+        rgba(212, 87, 78, 0.95)
+    );
+    color: #FFF3E0;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+section:not(:last-child) {
+    position: relative;
+    
+    margin-bottom: 3rem;
+}
+
+ection:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #D4574E, #FFD700, #006400, transparent);
+}
+
+.intro-image {
+    max-width: 35%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.feature-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-image:hover {
+    transform: scale(1.05);
+}
+
+/* 石窟页面特有样式 */
+.grotto-intro {
+    margin-bottom: 4rem;
+}
+
+.timeline-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, rgba(255, 243, 224, 0.95), rgba(255, 255, 255, 0.95));
+    border-radius: 10px;
+    position: relative;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.timeline-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    position: relative;
+}
+
+.timeline-item h3 {
+    color: #8B2323;
+    margin-bottom: 1rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #8B2323;
+}
+
+/* 调整原有样式以适应新页面 */
+.grotto-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* 石窟页面特有样式 */
+.craft-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.content ul {
+    text-align: left;
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.content ul li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+#history .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, rgba(255, 243, 224, 0.95), rgba(255, 255, 255, 0.95));
+    border-radius: 10px;
+    text-align: center;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #8B2323;
+    border-radius: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #8B2323;
+}
+
+/* 凿窟技术页面特有样式 */
+.technique-intro .content ol {
+    text-align: left;
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.technique-intro .content ol li {
+    margin: 0.8rem 0;
+    line-height: 1.6;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.details-section {
+    background: linear-gradient(to bottom right, rgba(255, 243, 224, 0.95), rgba(255, 255, 255, 0.95));
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.detail-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.detail-item {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.detail-item h3 {
+    color: #8B2323;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(139, 35, 35, 0.2);
+}
+
+/* 工具卡片新样式 */
+.tool-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.tool-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(139, 35, 35, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.tool-content {
+    text-align: left;
+    width: 100%;
+}
+
+.tool-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.tool-details ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(139, 35, 35, 0.2);
+}
+
+.tool-details ul li:last-child {
+    border-bottom: none;
+}
+
+/* 工具图标样式 */
+.tool-hammer, .tool-measure, .tool-support {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tool-hammer {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%238B2323" d="M12 2L2 12l10 10 10-10L12 2z"/></svg>');
+}
+
+.tool-measure {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%238B2323" d="M2 22h20V2H2v20z"/></svg>');
+}
+
+.tool-support {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%238B2323" d="M12 2L2 12h4v8h12v-8h4L12 2z"/></svg>');
+}
+
+/* 工具卡片悬停效果 */
+.tool-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to bottom right, rgba(255, 243, 224, 0.98), rgba(255, 255, 255, 0.98));
+}
+
+.tool-card:hover .tool-icon {
+    background: rgba(139, 35, 35, 0.2);
+}
+
+/* 更新凿窟工序图标样式 */
+.process-icon {
+    width: 300px;
+    height: 300px;
+    margin: 2rem auto;
+    display: block;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><linearGradient id="wallGradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:%238B2323;stop-opacity:0.3"/><stop offset="100%" style="stop-color:%238B2323;stop-opacity:0.1"/></linearGradient></defs><path fill="url(%23wallGradient)" d="M50,20 L280,20 L280,280 L50,280 Z"/><path fill="%238B2323" d="M120,100 C130,100 140,110 150,100 L150,120 C140,130 130,120 120,120 Z"/><path fill="%238B2323" d="M150,140 C160,130 170,140 180,130 L180,150 C170,160 160,150 150,150 Z"/><path fill="%238B2323" d="M130,180 C140,170 150,180 160,170 L160,190 C150,200 140,190 130,190 Z"/><path fill="%238B2323" d="M140,80 L145,200 L155,200 L160,80 Z"/><circle cx="150" cy="60" r="20" fill="%238B2323"/><path fill="%238B2323" d="M130,200 L170,200 L165,260 L135,260 Z"/><path fill="%238B2323" d="M110,150 L120,155 L125,165 L115,160 Z" transform="rotate(-45,115,155)"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 工艺图标样式 */
+.craft-icon {
+    width: 120px;
+    height: 120px;
+    margin: 2rem auto;
+    background: rgba(139, 35, 35, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.craft-symbol {
+    font-size: 3rem;
+    font-style: normal;
+}
+
+.feature-box:hover .craft-icon {
+    transform: scale(1.1);
+    background: rgba(139, 35, 35, 0.2);
+}
+
+/* 链接样式 */
+.feature-box a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.grotto-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(to bottom right, rgba(255, 243, 224, 0.95), rgba(255, 255, 255, 0.95));
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.grotto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.craft-icon {
+    font-size: 3rem;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+.grotto-card:hover .craft-icon {
+    transform: scale(1.1);
+}
+
+.craft-symbol {
+    font-style: normal;
+}
+
+/* 移除可能影响点击的样式 */
+.grotto-card a {
+    text-decoration: none;
+    color: inherit;
+} 

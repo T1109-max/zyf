@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支护工艺 - 敦煌探秘</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="support.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>石窟支护工艺</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">返回首页</a></li>
+                    <li><a href="grottoes.html">返回石窟</a></li>
+                    <li><a href="#types">支护类型</a></li>
+                    <li><a href="#interactive">互动体验</a></li>
+                    <li><a href="#game">支护挑战</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="types">
+            <h2>支护类型展示</h2>
+            <div class="support-grid">
+                <div class="support-card">
+                    <h3>临时支护</h3>
+                    <div class="support-3d">
+                        <div class="support-icon-container">
+                            <i class="support-big-icon">🏗️</i>
+                            <div class="support-icon-decoration">
+                                <span>🌲</span>
+                                <span>🔨</span>
+                                <span>📏</span>
+                            </div>
+                        </div>
+                        <div class="support-overlay">
+                            <div class="support-details">
+                                <ul>
+                                    <li><span class="detail-icon">🌲</span> 木质支撑架：采用优质硬木，确保承重</li>
+                                    <li><span class="detail-icon">🎋</span> 竹篾加固：增强横向稳定性</li>
+                                    <li><span class="detail-icon">🏗️</span> 临时托梁：分散顶部压力</li>
+                                    <li><span class="detail-icon">📏</span> 可调节支撑：适应不同高度需求</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="support-card">
+                    <h3>永久支护</h3>
+                    <div class="support-3d">
+                        <div class="support-icon-container">
+                            <i class="support-big-icon">🏛️</i>
+                            <div class="support-icon-decoration">
+                                <span>🧱</span>
+                                <span>📐</span>
+                                <span>⚒️</span>
+                            </div>
+                        </div>
+                        <div class="support-overlay">
+                            <div class="support-details">
+                                <ul>
+                                    <li><span class="detail-icon">🏛️</span> 石柱支撑：主要承重结构</li>
+                                    <li><span class="detail-icon">🧱</span> 砖砌加固：加强壁面稳定性</li>
+                                    <li><span class="detail-icon">🏗️</span> 梁架结构：分散顶部压力</li>
+                                    <li><span class="detail-icon">📐</span> 多点支撑：确保整体稳定</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interactive">
+            <h2>互动体验区</h2>
+            <div class="interactive-area">
+                <div class="simulation-container">
+                    <h3>支护模拟器</h3>
+                    <div class="simulation-view">
+                        <canvas id="supportSimulation"></canvas>
+                        <div class="simulation-controls">
+                            <button class="control-btn" data-action="test">测试结构</button>
+                            <button class="control-btn" data-action="reset">重置</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-container">
+                    <h3>支护知识问答</h3>
+                    <!-- 问答内容由 JavaScript 动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <section id="game">
+            <h2>支护挑战游戏</h2>
+            <div class="game-container">
+                <div class="game-area">
+                    <div class="game-canvas-container">
+                        <canvas id="supportGame"></canvas>
+                        <div class="game-overlay">
+                            <div class="game-status">
+                                <div class="status-bar">
+                                    <span class="status-label">时间：</span>
+                                    <span id="gameTimer">60</span>秒
+                                </div>
+                                <div class="status-bar">
+                                    <span class="status-label">得分：</span>
+                                    <span id="gameScore">0</span>
+                                </div>
+                            </div>
+                            <div class="game-tools">
+                                <div class="tool-item" data-tool="support">
+                                    <span class="tool-icon">🏗️</span>
+                                    <span class="tool-count">x5</span>
+                                </div>
+                                <div class="tool-item" data-tool="reinforce">
+                                    <span class="tool-icon">🔨</span>
+                                    <span class="tool-count">x3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-controls">
+                        <button class="control-btn" id="startGame">开始游戏</button>
+                        <button class="control-btn" id="pauseGame">暂停</button>
+                        <button class="control-btn" id="restartGame">重新开始</button>
+                    </div>
+                </div>
+                <div class="game-instructions">
+                    <h3>游戏说明</h3>
+                    <div class="instruction-content">
+                        <div class="instruction-item">
+                            <span class="instruction-icon">🎯</span>
+                            <p>目标：在限定时间内完成洞窟支护</p>
+                        </div>
+                        <div class="instruction-item">
+                            <span class="instruction-icon">🎮</span>
+                            <p>操作：点击放置支撑，拖���调整位置</p>
+                        </div>
+                        <div class="instruction-item">
+                            <span class="instruction-icon">⚡</span>
+                            <p>挑战：注意受力平衡，防止坍塌</p>
+                        </div>
+                    </div>
+                    <div class="level-selection">
+                        <h4>选择难度</h4>
+                        <div class="level-buttons">
+                            <button class="level-btn" data-level="1">初级</button>
+                            <button class="level-btn" data-level="2">中级</button>
+                            <button class="level-btn" data-level="3">高级</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 敦煌文化遗产. 让艺术与历史永存。</p>
+    </footer>
+    
+    <script src="support.js"></script>
+</body>
+</html> 

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>凿窟技术 - 敦煌探秘</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="excavation.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>敦煌石窟凿窟技术</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">返回首页</a></li>
+                    <li><a href="grottoes.html">返回石窟</a></li>
+                    <li><a href="#tools">工具介绍</a></li>
+                    <li><a href="#process">开凿工序</a></li>
+                    <li><a href="#simulation">模拟体验</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro" class="fade-in">
+            <div class="intro-text">
+                <h2>凿窟技术概述</h2>
+                <p>敦煌莫高窟的凿窟技术是古代工匠智慧的结晶，体现了精湛的工程技术和丰富的实践经验。工匠们根据岩层特点，采用由上至下的开凿方式，确保洞窟结构的稳固性。</p>
+            </div>
+        </section>
+
+        <section id="tools" class="fade-in">
+            <h2>凿窟工具展示</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">⚒️</div>
+                    <h3>錾子组</h3>
+                    <div class="tool-info">
+                        <p>主要凿刻工具</p>
+                        <ul>
+                            <li>尖錾：初步开凿</li>
+                            <li>平錾：修整平面</li>
+                            <li>圆錾：雕刻曲面</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🔨</div>
+                    <h3>锤具组</h3>
+                    <div class="tool-info">
+                        <p>配合錾子使用</p>
+                        <ul>
+                            <li>大锤：粗凿阶段</li>
+                            <li>中锤：细凿阶段</li>
+                            <li>小锤：精雕阶段</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">📏</div>
+                    <h3>测量工具</h3>
+                    <div class="tool-info">
+                        <p>确保精准度</p>
+                        <ul>
+                            <li>墨斗：画直线</li>
+                            <li>尺：测量尺寸</li>
+                            <li>圆规：画圆形</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="fade-in">
+            <h2>开凿工序展示</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>选址勘察</h3>
+                        <p>根据岩层结构、朝向等因素选择合适位置</p>
+                        <div class="step-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>测量放线</h3>
+                        <p>确定洞窟尺寸，标记开凿范围</p>
+                        <div class="step-icon">📐</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>粗凿成型</h3>
+                        <p>自上而下分层开凿主体空间</p>
+                        <div class="step-icon">⚒️</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>精细加工</h3>
+                        <p>修整壁面，雕刻细节</p>
+                        <div class="step-icon">🔨</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulation" class="fade-in">
+            <h2>凿窟模拟体验</h2>
+            <div class="simulation-area">
+                <div class="simulation-container">
+                    <h3>开凿模拟器</h3>
+                    <div class="simulation-view">
+                        <canvas id="excavationCanvas"></canvas>
+                        <div class="tool-panel">
+                            <button class="tool-btn" data-tool="chisel">
+                                <span class="tool-icon">⚒️</span>
+                                <span class="tool-name">錾子</span>
+                            </button>
+                            <button class="tool-btn" data-tool="hammer">
+                                <span class="tool-icon">🔨</span>
+                                <span class="tool-name">锤子</span>
+                            </button>
+                            <button class="tool-btn" data-tool="measure">
+                                <span class="tool-icon">📏</span>
+                                <span class="tool-name">测量</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="knowledge-quiz">
+                    <h3>凿窟知识问答</h3>
+                    <div class="quiz-container">
+                        <!-- 问答内容由JavaScript动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 敦煌文化遗产. 让艺术与历史永存。</p>
+    </footer>
+
+    <script src="excavation.js"></script>
+</body>
+</html> 

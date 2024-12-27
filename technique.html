@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敦煌石窟装饰工艺 - 敦煌探秘</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="technique.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>敦煌石窟装饰工艺</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">返回首页</a></li>
+                    <li><a href="grottoes.html">返回石窟</a></li>
+                    <li><a href="#patterns">装饰纹样</a></li>
+                    <li><a href="#colors">色彩艺术</a></li>
+                    <li><a href="#interactive">互动体验</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro" class="fade-in">
+            <div class="intro-text">
+                <h2>装饰工艺概述</h2>
+                <p>敦煌莫高窟的装饰工艺是中国古代艺术的瑰宝，包含了泥塑、壁画、彩绘等多��艺术形式的完美结合。工匠们运用精湛的技艺，创造出了独特的视觉艺术体系。</p>
+            </div>
+        </section>
+
+        <section id="patterns" class="fade-in">
+            <h2>装饰纹样探索</h2>
+            <div class="pattern-grid">
+                <div class="pattern-card scratch-card">
+                    <div class="pattern-content">
+                        <h3>飞天纹</h3>
+                        <div class="pattern-icon">🧚</div>
+                        <p class="pattern-desc">代表佛教天界的神奇意象</p>
+                    </div>
+                    <canvas class="scratch-overlay" data-pattern="飞天"></canvas>
+                </div>
+
+                <div class="pattern-card scratch-card">
+                    <div class="pattern-content">
+                        <h3>莲花纹</h3>
+                        <div class="pattern-icon">🌸</div>
+                        <p class="pattern-desc">象征佛教的清净与圣洁</p>
+                    </div>
+                    <canvas class="scratch-overlay" data-pattern="莲花"></canvas>
+                </div>
+
+                <div class="pattern-card scratch-card">
+                    <div class="pattern-content">
+                        <h3>忍冬纹</h3>
+                        <div class="pattern-icon">🌿</div>
+                        <p class="pattern-desc">象征生命延续的装饰纹样</p>
+                    </div>
+                    <canvas class="scratch-overlay" data-pattern="忍冬"></canvas>
+                </div>
+
+                <div class="pattern-card scratch-card">
+                    <div class="pattern-content">
+                        <h3>云纹</h3>
+                        <div class="pattern-icon">☁️</div>
+                        <p class="pattern-desc">表达祥瑞的传统纹样</p>
+                    </div>
+                    <canvas class="scratch-overlay" data-pattern="云纹"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="colors" class="fade-in">
+            <h2>色彩艺术揭秘</h2>
+            <div class="color-wheel">
+                <div class="color-segments">
+                    <div class="color-segment red-segment">
+                        <span class="color-name">红色</span>
+                        <div class="color-detail">
+                            <p>朱砂、赭石</p>
+                            <p>象征吉祥喜庆</p>
+                        </div>
+                    </div>
+                    <div class="color-segment blue-segment">
+                        <span class="color-name">蓝色</span>
+                        <div class="color-detail">
+                            <p>青金石粉</p>
+                            <p>代表庄严神圣</p>
+                        </div>
+                    </div>
+                    <div class="color-segment gold-segment">
+                        <span class="color-name">金色</span>
+                        <div class="color-detail">
+                            <p>金箔、金粉装饰</p>
+                            <p>代表尊贵与神圣</p>
+                        </div>
+                    </div>
+                    <div class="color-segment green-segment">
+                        <span class="color-name">绿色</span>
+                        <div class="color-detail">
+                            <p>孔雀石、铜绿</p>
+                            <p>象征生机与活力</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interactive" class="fade-in">
+            <h2>装饰工艺互动体验</h2>
+            <div class="interactive-area">
+                <div class="technique-simulator">
+                    <h3>装饰模拟器</h3>
+                    <div class="canvas-container">
+                        <canvas id="techniqueCanvas"></canvas>
+                        <div class="tool-panel">
+                            <div class="tool-group">
+                                <button class="tool-btn" data-tool="brush">
+                                    <span class="tool-icon">🖌️</span>
+                                    <span class="tool-name">彩绘</span>
+                                </button>
+                                <button class="tool-btn" data-tool="pattern">
+                                    <span class="tool-icon">🎨</span>
+                                    <span class="tool-name">纹样</span>
+                                </button>
+                                <button class="tool-btn" data-tool="gold">
+                                    <span class="tool-icon">✨</span>
+                                    <span class="tool-name">贴金</span>
+                                </button>
+                            </div>
+                            <div class="color-palette">
+                                <div class="color-btn" style="background: #8B2323"></div>
+                                <div class="color-btn" style="background: #4169E1"></div>
+                                <div class="color-btn" style="background: #FFD700"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technique-quiz">
+                    <h3>装饰知识问答</h3>
+                    <div class="quiz-container">
+                        <!-- 问答内容由JavaScript动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 敦煌文化遗产. 让艺术与历史永存。</p>
+    </footer>
+
+    <script src="technique.js"></script>
+</body>
+</html> 

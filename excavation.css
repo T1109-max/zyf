@@ -1,0 +1,200 @@
+/* 基础样式 */
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 工具展示区域 */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.tool-card {
+    background: linear-gradient(to bottom right, rgba(255, 243, 224, 0.95), rgba(255, 255, 255, 0.95));
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tool-icon {
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.tool-info {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.tool-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.tool-info li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(139, 35, 35, 0.2);
+}
+
+/* 工序展示区域 */
+.process-timeline {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    position: relative;
+}
+
+.process-step {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #8B2323;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+.step-content {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.step-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+/* 模拟体验区域 */
+.simulation-area {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.simulation-container {
+    background: linear-gradient(to bottom right, rgba(255, 243, 224, 0.95), rgba(255, 255, 255, 0.95));
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.simulation-view {
+    position: relative;
+    margin-top: 1rem;
+    min-height: 400px;
+}
+
+.tool-panel {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tool-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tool-btn:hover {
+    background: #FFF3E0;
+    transform: translateX(5px);
+}
+
+.tool-btn.active {
+    background: #8B2323;
+    color: white;
+}
+
+/* 知识问答区域 */
+.knowledge-quiz {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.quiz-container {
+    margin-top: 1rem;
+}
+
+.quiz-question {
+    margin-bottom: 1.5rem;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quiz-option {
+    padding: 1rem;
+    background: white;
+    border: 1px solid rgba(139, 35, 35, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-option:hover {
+    background: #FFF3E0;
+}
+
+.quiz-option.correct {
+    background: #90EE90;
+}
+
+.quiz-option.wrong {
+    background: #FFB6C1;
+}
+
+.quiz-feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    background: #FFF3E0;
+} 
